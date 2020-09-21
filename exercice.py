@@ -28,17 +28,23 @@ def prime_integer_summation() -> int:
 
         if prime == True:
             sum += i
-            print(i)
+
 
     return sum
 
 
 def factorial(number: int) -> int:
-    return 0
+    result = 1
+    for i in range(1, number):
+        result = result *i
+    return result
 
 
 def use_continue() -> None:
-    pass
+    for i in range(0,10):
+        if i ==5:
+            continue
+        print(i)
 
 
 def main() -> None:
