@@ -4,23 +4,33 @@
 
 from typing import List
 
-
 def convert_to_absolute() -> float:
     nombre =int(input("Choisie un nombre: "))
     return abs(nombre)
 
 
 def use_prefixes() -> List[str]:
-    list =[]
-    prefixes, suffixes = 'JKLMNOP', 'ack'
+    result =[]
+    prefixes, suffixes = 'JKLMNOPQ', 'ack'
     for i in range(0,len(prefixes)):
         name = prefixes[i] + suffixes
-        list.append(name)
-    return list
+        result.append(name)
+    return result
 
 
 def prime_integer_summation() -> int:
-    return 0
+    sum = 0
+    for i in range(2,100):
+        prime = True
+        for divider in range(2, int((i / 2)**1/2)+1):
+            if i % divider == 0:
+                prime = False
+
+        if prime == True:
+            sum += i
+            print(i)
+
+    return sum
 
 
 def factorial(number: int) -> int:
